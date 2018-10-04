@@ -1,7 +1,8 @@
-#include <stdio.h>
 
-int main(){
+#include <unistd.h>
 
-	printf("hello world")
-	return 0;
+int main() {
+  char c;
+  while (read(STDIN_FILENO, &c, 1) == 1);
+  return 0;
 }
